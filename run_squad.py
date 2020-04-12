@@ -35,27 +35,27 @@ FLAGS = flags.FLAGS
 
 ## Required parameters
 flags.DEFINE_string(
-    "bert_config_file", None,
+    "bert_config_file", "../models/multi_cased_L-12_H-768_A-12/bert_config.json",
     "The config json file corresponding to the pre-trained BERT model. "
     "This specifies the model architecture.")
 
-flags.DEFINE_string("vocab_file", None,
+flags.DEFINE_string("vocab_file", "../models/multi_cased_L-12_H-768_A-12/vocab.txt",
                     "The vocabulary file that the BERT model was trained on.")
 
 flags.DEFINE_string(
-    "output_dir", None,
+    "output_dir", "../models/bert_out/only_english/",
     "The output directory where the model checkpoints will be written.")
 
-## Other parameters
-flags.DEFINE_string("train_file", None,
+# Other parameters
+flags.DEFINE_string("train_file", "../datasets/train-v2.0.json",
                     "SQuAD json for training. E.g., train-v1.1.json")
 
 flags.DEFINE_string(
-    "predict_file", None,
+    "predict_file", "../datasets/dev-v2.0.json",
     "SQuAD json for predictions. E.g., dev-v1.1.json or test-v1.1.json")
 
 flags.DEFINE_string(
-    "init_checkpoint", None,
+    "init_checkpoint", "../models/multi_cased_L-12_H-768_A-12/bert_model.ckpt",
     "Initial checkpoint (usually from a pre-trained BERT model).")
 
 flags.DEFINE_bool(
@@ -79,9 +79,9 @@ flags.DEFINE_integer(
     "The maximum number of tokens for the question. Questions longer than "
     "this will be truncated to this length.")
 
-flags.DEFINE_bool("do_train", False, "Whether to run training.")
+flags.DEFINE_bool("do_train", True, "Whether to run training.")
 
-flags.DEFINE_bool("do_predict", False, "Whether to run eval on the dev set.")
+flags.DEFINE_bool("do_predict", True, "Whether to run eval on the dev set.")
 
 flags.DEFINE_integer("train_batch_size", 32, "Total batch size for training.")
 
@@ -141,7 +141,7 @@ flags.DEFINE_integer(
     "Only used if `use_tpu` is True. Total number of TPU cores to use.")
 
 flags.DEFINE_bool(
-    "verbose_logging", False,
+    "verbose_logging", True,
     "If true, all of the warnings related to data processing will be printed. "
     "A number of warnings are expected for a normal SQuAD evaluation.")
 
