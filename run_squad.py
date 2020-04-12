@@ -146,7 +146,7 @@ flags.DEFINE_bool(
     "A number of warnings are expected for a normal SQuAD evaluation.")
 
 flags.DEFINE_bool(
-    "version_2_with_negative", False,
+    "version_2_with_negative", True,
     "If true, the SQuAD examples contain some that do not have an answer.")
 
 flags.DEFINE_float(
