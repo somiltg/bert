@@ -260,8 +260,7 @@ def read_squad_examples(input_file, is_training):
         orig_answer_text = None
         is_impossible = False
         if is_training:
-          import pdb
-          pdb.set_trace()
+          print(FLAGS)
           
           if FLAGS.version_2_with_negative:
             is_impossible = qa["is_impossible"]
