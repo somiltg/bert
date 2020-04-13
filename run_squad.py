@@ -43,7 +43,7 @@ flags.DEFINE_string("vocab_file", "../models/multi_cased_L-12_H-768_A-12/vocab.t
                     "The vocabulary file that the BERT model was trained on.")
 
 flags.DEFINE_string(
-    "output_dir", "../models/bert_out/only_english/",
+    "output_dir", "../models/only_english",
     "The output directory where the model checkpoints will be written.")
 
 # Other parameters
@@ -59,7 +59,7 @@ flags.DEFINE_string(
     "Initial checkpoint (usually from a pre-trained BERT model).")
 
 flags.DEFINE_bool(
-    "do_lower_case", True,
+    "do_lower_case", False,
     "Whether to lower case the input text. Should be True for uncased "
     "models and False for cased models.")
 
@@ -150,7 +150,7 @@ flags.DEFINE_bool(
     "If true, the SQuAD examples contain some that do not have an answer.")
 
 flags.DEFINE_float(
-    "null_score_diff_threshold", 0.0,
+    "null_score_diff_threshold", 1.8,
     "If null_score - best_non_null is greater than the threshold predict null.")
 
 
