@@ -1,3 +1,10 @@
+
+
+Use of m-BERT for https://arxiv.org/abs/2006.01432. 
+
+We have preprocessed MMQA and translated SQuAD datasets provided by authors of https://dl.acm.org/doi/abs/10.1145/3359988 and make them SQuAD complaint and create mono and cross lingual language variants. Please check translated_squad and translated mmqa containing the preprocessed variants from the files. These folders also contain the raw dataset files provided by the authors of  https://dl.acm.org/doi/abs/10.1145/3359988.   The jupyter notebooks for conversion and sanitization are provided in the repository.  Prediction folder contains files of predictions of our best models from all the base datasets. 
+
+---
 # BERT
 
 **\*\*\*\*\* New March 11th, 2020: Smaller BERT Models \*\*\*\*\***
